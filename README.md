@@ -1,7 +1,7 @@
 Features:
 1. Divided difference,
     1. Calculate divided difference,
-    "2. Generate a values",
+    2. Generate a values,
     3. Generate divided differnece table from function,
     4. Generate divided dfference table from points (x,f(x)),
 2. Newton polynomials,
@@ -28,7 +28,7 @@ Features:
         2. Simpson 3/8,
         3. Composite Simpson From Interval,
         4. Compositre Simpson From xvals,
-    "3. Booles",
+    3. Booles,
 5. Numerical Methods,
     1. Bisection of Bolonzo,
     2. False Position,
