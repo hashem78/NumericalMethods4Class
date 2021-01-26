@@ -6,7 +6,7 @@ import 'functions.dart';
 
 class NumericalMethods {
   static const menuItems = <String>[
-    '1. Bisection of Bolonzo',
+    '1. Bisection of Bolzano',
     '2. False Position',
     '3. Newton Iteration',
     '4. Accelerated Newton Iteration',
@@ -27,7 +27,7 @@ class NumericalMethods {
         final a = double.parse(stdin.readLineSync());
         stdout.write('Enter b0: ');
         final b = double.parse(stdin.readLineSync());
-        print(bisectionOfBolanzo(func, a, b));
+        print(bisectionOfBolzano(func, a, b));
         stdin.readByteSync();
         break;
       case 2:
@@ -85,7 +85,7 @@ class NumericalMethods {
     return a * b < 0;
   }
 
-  static double bisectionOfBolanzo(
+  static double bisectionOfBolzano(
     String func,
     num a,
     num b, {
