@@ -46,38 +46,30 @@ class NumericalDifferentiationFirstDir {
       case 1:
         {
           final func = requestFunction();
-          stdout.write('Enter x value: ');
-          final x = double.parse(stdin.readLineSync());
-          stdout.write('Enter step size (h) value: ');
-          final h = double.parse(stdin.readLineSync());
+          final x = promptNum('Enter x value: ');
+          final h = promptNum('Enter step size (h) value: ');
           printResult(centralDiffernceO2(func, x, h));
         }
         break;
       case 2:
         {
-          print('Enter order of root M: ');
-          final m = int.parse(stdin.readLineSync());
-          print('Enter the value of epsilon: ');
-          final epsilon = int.parse(stdin.readLineSync());
+          final m = promptNum('Enter M (max value of function: ): ');
+          final epsilon = promptNum('Enter the value of epsilon: ');
           printResult(optimumCentralDifferenceO2(m, epsilon));
         }
         break;
       case 3:
         {
           final func = requestFunction();
-          stdout.write('Enter x value: ');
-          final x = double.parse(stdin.readLineSync());
-          stdout.write('Enter step size (h) value: ');
-          final h = double.parse(stdin.readLineSync());
+          final x = promptNum('Enter x value: ');
+          final h = promptNum('Enter step size (h) value: ');
           printResult(centralDiffernceO4(func, x, h));
         }
         break;
       case 4:
         {
-          print('Enter order of root M: ');
-          final m = int.parse(stdin.readLineSync());
-          print('Enter the value of epsilon: ');
-          final epsilon = int.parse(stdin.readLineSync());
+          final m = promptNum('Enter M (max value of function: ): ');
+          final epsilon = promptNum('Enter the value of epsilon: ');
           printResult(optimumCentralDifferenceO4(m, epsilon));
         }
         break;

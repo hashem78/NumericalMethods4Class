@@ -237,7 +237,7 @@ class CurveFitting {
     List<double> xvals;
     List<double> yvals;
 
-    if (ans) {
+    if (!ans) {
       xvals = prompt('Enter a list of x values: : ')
           .split(' ')
           .map(double.parse)
@@ -336,7 +336,7 @@ class CurveFitting {
     final m =
         promptNum('Enter a M(highest polynomial power in equation given): ');
 
-    if (sums) {
+    if (!sums) {
       sx2m = _sum(xvals, power: 2 * m);
       sxmy = _sumxMy(xvals, yvals, m);
       print('sum of x^(2M): $sx2m');
