@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:acm/curve_fitting.dart';
+
 import 'divided_difference.dart';
 import 'functions.dart';
 import 'matirx_methods.dart';
@@ -17,7 +19,8 @@ class Application {
     '5. Numerical Methods',
     '6. Generate Lagrange Polynomial ',
     '7. Matrix Methods',
-    '8. Evaluate function at',
+    '8. Curve Fitting',
+    '9. Evaluate function at',
     '0. Exit'
   ];
   static void menu() {
@@ -61,6 +64,9 @@ class Application {
         MatrixMethods.menu();
         break;
       case 8:
+        CurveFitting.menu();
+        break;
+      case 9:
         {
           final func = requestFunction();
           while (true) {

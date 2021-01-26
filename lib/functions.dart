@@ -66,7 +66,8 @@ String findLagrangePolynomial(String y, int N, List<num> xvals,
 }
 
 class GaussJordan {
-  static List<List<double>> solve(List<List<double>> matrix) {
+  static List<List<double>> solve(List<List<double>> matrix,
+      {bool supress = false}) {
     var lead = 0, rowCount = matrix.length, columnCount = matrix[1].length;
     for (var r = 0; r < rowCount; r++) {
       if (columnCount <= lead) break;
@@ -102,10 +103,14 @@ class GaussJordan {
         }
       }
       lead++;
-      print('Matrix on iteration #$r');
-      printMatrix(matrix);
+      if (!supress) {
+        print('Matrix on iteration #$r');
+        printMatrix(matrix);
+      }
     }
-    print('');
+    if (!supress) {
+      print('');
+    }
     return matrix;
   }
 
@@ -188,4 +193,14 @@ void clearConsole() {
   } else {
     print(Process.runSync('clear', [], runInShell: true).stdout);
   }
+}
+
+String prompt(String message) {
+  stdout.write(message);
+  return stdin.readLineSync();
+}
+
+double promptNum(String message) {
+  stdout.write(message);
+  return double.parse(stdin.readLineSync());
 }
