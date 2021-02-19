@@ -1,4 +1,12 @@
-Features:
+![](https://dart.dev/assets/shared/dart-logo-for-shares.png?2)
+
+
+# About
+This is a small console application I built over a couple of days to help me with a numerics course I picked up last sem,
+it is badly documented but the code is self-explanatory.
+
+
+# Features:
 1. Divided difference
     1. Calculate divided difference
     2. Generate a values
@@ -49,3 +57,8 @@ Features:
         2. Functions of the form y = A/x + B
         3. Functions of the form y = Cxe^-Dx
 9. Evaluate function at
+
+# How to use
+```dart
+dart run main.dart
+```
